@@ -9,3 +9,7 @@
 # @Desc   : LangChain 环境测试
 # --------------------------------------------------------
 """
+import langchain
+
+if __name__ == "__main__":
+    print(langchain.__version__)
