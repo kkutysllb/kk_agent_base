@@ -1,8 +1,0 @@
-_type: prompt
-
-input_variables:
-  - name
-  - what
-
-template: |
-  请讲述一个关于{name}的{what}的故事.
