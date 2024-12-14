@@ -47,13 +47,13 @@ def custom_prompt_template():
         
     custom_prompt = CustomPrompt(input_variables=["function_name", "function_explanation"])
     custom_prompt = custom_prompt.format(function_name=hello_world, function_explanation="这是一个简单的Hello, World!函数")
-    print(custom_prompt)
+    # print(custom_prompt)
     
     # 直接和本地大模型连接起来
     # 本地大模型采用LMStudio启用lamma3-8b-instruct模型
     api_key = "xxx"
-    base_url = "http://172.24.0.1:1234/v1"
-    llm = ChatOpenAI(api_key=api_key, base_url=base_url, temperature=0.7)
+    base_url = "http://127.0.0.1:1234/v1"
+    llm = OpenAI(api_key=api_key, base_url=base_url, temperature=0.7)
     
     print(llm.invoke(custom_prompt))
 
